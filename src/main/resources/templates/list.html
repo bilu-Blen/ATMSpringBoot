@@ -15,9 +15,9 @@
         <td th:text="${atm.account}"></td>
         <td th:text="${atm.amount}"></td>
         <td>
-            <a th:href="@{/update/{id}(id=${atm.id})}">Deposit</a>
-
-            <a th:href="@{/update/{id}(id=${atm.id})}">Withdrawal</a>
+            <a th:href="@{/update/{id}(id=${atm.id})}">Deposit(using update)</a>
+            <a th:href="@{/deposit/{id}(id=${atm.id})}">Deposit(from the account, i tried:)  )</a>
+            <a th:href="@{/update/{id}(id=${atm.id})}">Withdrawal (using update)</a>
         </td>
 
     </tr>

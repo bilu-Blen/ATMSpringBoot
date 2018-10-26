@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Add Account number and amount in account for a customer</h4>
+<form name ="account" action="#" th:action="@{/process2}" th:object="${customer}" method="post">
+
+<!--
+    <input type="hidden" th:field="*{id}" />
+-->
+    Account: <input type="number" th:field="*{account}" />
+    <span th:if="${#fields.hasErrors('account')}" th:errors="*{account}"></span> <br /> <br />
+
+    Amount in  account : <input type="number" th:field="*{amountInAccount}" >
+    <span th:if="${#fields.hasErrors('amountInAccount')}" th:errors="*{amountInAccount}"></span> <br /> <br />
+
+
+    <input type="submit"   value="Submit">
+
+</form>
+
+
+</body>
+</html>

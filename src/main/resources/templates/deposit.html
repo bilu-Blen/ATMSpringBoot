@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en"  xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <h4>Deposit</h4>
-    <h6>The amount you have is: </h6>
-    <p th:text="${atm.amount}"></p>
+<table>
+    <tr>
+        <th>The Amount you have in your account is: </th>
+    </tr>
 
-
+    <tr th:each="atm :${atms}">
+        <td th:text=" ${atm.amount} "></td>
+    </tr>
+</table>
 </body>
 </html>
