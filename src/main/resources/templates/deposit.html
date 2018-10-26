@@ -7,11 +7,15 @@
 <body>
 <table>
     <tr>
+        <th>The Amount you enter: </th>
         <th>The Amount you have in your account is: </th>
+
     </tr>
 
     <tr th:each="atm :${atms}">
         <td th:text=" ${atm.amount} "></td>
+        <td th:text=" ${customer.amountInAccount} "></td>
+
     </tr>
 </table>
 </body>
