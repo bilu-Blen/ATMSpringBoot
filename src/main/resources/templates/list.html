@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Account</th>
+        <th>Amount</th>
+    </tr>
+
+    <tr th:each="atm :${atms}">
+        <td th:text="${atm.account}"></td>
+        <td th:text="${atm.amount}"></td>
+        <td>
+            <a th:href="@{/update/{id}(id=${atm.id})}">Deposit</a>
+
+            <a th:href="@{/update/{id}(id=${atm.id})}">Withdrawal</a>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
